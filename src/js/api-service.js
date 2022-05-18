@@ -4,8 +4,9 @@
     // (теперь фунция только возвращает данные с сервера и парсит их ( response.json()))
     // и выносим функцию fetch, связанную с сервером в отдельный файл!!!
 
+// "https://pokeapi.co/api/v2/"
     // наш корневой адрес для запроса
-    const BASE = "https://pokeapi.co/api/v2/"
+    const BASE = "http://pokeapi.salestock.net/api/v2/"
 function fetchPokemon(id) {
     const url = `${BASE}/pokemon/${id}`;
     return fetch(url)
