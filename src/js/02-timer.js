@@ -149,11 +149,11 @@ const refs = {
     hours: document.querySelector("[data-hours]"),
     minutes: document.querySelector("[data-minutes]"),
     seconds: document.querySelector("[data-seconds]"),
+    input: document.querySelector("#datetime-picker"),
 }
 
 class Timer {
     constructor({ onTick }) {
-        this. isActive = false;
         this.intervalId = null;
         this.onTick = onTick;
     }
@@ -161,6 +161,7 @@ class Timer {
     start() {
         if (!this.isActive) {
             this.isActive = true;
+            refs.input.setAttribute("disabled", true);
             this.intervalId = setInterval(() => {
                 const currentTime = Date.now();
                 const targetTimeInMs = userSelectedDate.getTime();
@@ -172,7 +173,7 @@ class Timer {
                     console.log(deltaTime)
                 }
             }, 1000);
-        }
+            }
     }
 }
 

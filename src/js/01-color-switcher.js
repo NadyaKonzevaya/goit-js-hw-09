@@ -31,13 +31,12 @@ refs.startBtn.addEventListener("click", onStartBtnClick);
 refs.stopBtn.addEventListener("click", onStopBtnClick);
 
 function onStartBtnClick() {
+    refs.startBtn.setAttribute("disabled", true);
+    refs.stopBtn.removeAttribute("disabled");
     changeColor()
     timerId = setInterval(() => {
         changeColor()
     }, 1000);
-    
-    refs.startBtn.setAttribute("disabled", true);
-    refs.stopBtn.removeAttribute("disabled");
 }
 
 function onStopBtnClick() {

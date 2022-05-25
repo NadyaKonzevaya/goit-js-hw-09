@@ -37,7 +37,7 @@ img {
   background-color:azure ;
   border-radius: 5px;
   border: 2px solid aqua;
-
+  cursor: pointer;
 }
 .field {
   margin: 10px;
